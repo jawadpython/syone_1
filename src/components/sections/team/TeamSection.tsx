@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/SectionContainer";
@@ -5,6 +6,11 @@ import { SectionContainer } from "@/components/ui/SectionContainer";
 interface TeamSectionProps {
   teaser?: boolean;
 }
+
+const founderPhotos: Record<string, string> = {
+  "Yassine Ziad": "/team/yassine-ziad.jpg",
+  "Youssef Zerrari": "/team/youssef-zerrari.jpg",
+};
 
 export function TeamSection({ teaser = false }: TeamSectionProps) {
   const tHome = useTranslations("home.team");
@@ -50,16 +56,26 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
         {founders.map((founder) => (
           <article
             key={founder.name}
-            className="flex gap-4 rounded-xl border border-border bg-bg-subtle/60 p-5"
+            className="flex min-h-[168px] overflow-hidden rounded-xl border border-border bg-white shadow-card"
           >
-            <div className="relative h-28 w-24 shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-navy to-electric">
-              <div className="flex h-full w-full items-center justify-center font-serif text-2xl text-white">
-                {founder.initials}
-              </div>
+            <div className="relative w-[38%] min-w-[7.5rem] shrink-0 self-stretch bg-bg-mist">
+              {founderPhotos[founder.name] ? (
+                <Image
+                  src={founderPhotos[founder.name]}
+                  alt={founder.name}
+                  fill
+                  className="object-cover object-[center_20%]"
+                  sizes="(max-width: 1024px) 40vw, 180px"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center font-serif text-2xl text-navy">
+                  {founder.initials}
+                </div>
+              )}
             </div>
-            <div className="min-w-0">
+            <div className="flex min-w-0 flex-1 flex-col justify-center px-4 py-4 sm:px-5">
               <h3 className="font-sans text-base font-bold text-navy">{founder.name}</h3>
-              <p className="mt-0.5 text-sm text-electric">{founder.role}</p>
+              <p className="mt-0.5 text-sm text-text-muted">{founder.role}</p>
               <p className="mt-2 text-xs leading-relaxed text-text-muted line-clamp-4">
                 {teaser ? founder.shortBio || founder.bio : founder.bio}
               </p>
@@ -67,7 +83,7 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
                 href={founder.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-block text-xs font-semibold text-navy underline-offset-2 hover:underline"
+                className="mt-3 inline-block text-xs font-semibold text-electric underline-offset-2 hover:underline"
               >
                 LinkedIn
               </a>
@@ -75,10 +91,10 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
           </article>
         ))}
 
-        <article className="flex gap-4 rounded-xl border border-border bg-bg-subtle/60 p-5">
-          <div className="flex h-28 w-24 shrink-0 items-center justify-center rounded-lg bg-white">
+        <article className="flex min-h-[168px] overflow-hidden rounded-xl border border-border bg-white shadow-card">
+          <div className="flex w-[38%] min-w-[7.5rem] shrink-0 items-center justify-center self-stretch bg-bg-mist">
             <svg
-              className="h-12 w-12 text-electric"
+              className="h-14 w-14 text-electric"
               fill="none"
               viewBox="0 0 48 48"
               stroke="currentColor"
@@ -91,7 +107,7 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
               <path d="M8 38c1.5-5 5-8 8-8s6.5 3 8 8M24 38c1.5-5 5-8 8-8s6.5 3 8 8" />
             </svg>
           </div>
-          <div>
+          <div className="flex min-w-0 flex-1 flex-col justify-center px-4 py-4 sm:px-5">
             <h3 className="font-sans text-base font-bold text-navy">{tTeam("networkCardTitle")}</h3>
             <p className="mt-2 text-xs leading-relaxed text-text-muted">
               {tTeam("networkCardText")}
