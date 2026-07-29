@@ -1,0 +1,464 @@
+{
+  "metadata": {
+    "siteName": "SY'ONE Consulting",
+    "defaultDescription": "Cabinet de conseil spécialisé dans la transformation digitale, l'IT, la Data, l'IA et la performance opérationnelle pour les institutions financières."
+  },
+  "nav": {
+    "home": "Accueil",
+    "expertises": "Expertises",
+    "approach": "Notre approche",
+    "cases": "Références",
+    "team": "Équipe",
+    "contact": "Contact",
+    "cta": "Parler à un expert"
+  },
+  "footer": {
+    "tagline": "Transformons vos ambitions en résultats durables.",
+    "contact": "Contact",
+    "links": "Liens rapides",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "hours": "Réception et rendez-vous sur demande",
+    "rights": "Tous droits réservés.",
+    "follow": "Suivez-nous"
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "discoverExpertises": "Découvrir nos expertises",
+    "discussProject": "Discutons de votre projet",
+    "contactUs": "Nous contacter",
+    "challenge": "Défi",
+    "valueDelivered": "Valeur délivrée",
+    "backHome": "Retour à l'accueil",
+    "viewCases": "Voir nos cas d'usage",
+    "viewAllCases": "Voir toutes nos références",
+    "discoverAllExpertises": "Découvrir toutes nos expertises"
+  },
+  "home": {
+    "meta": {
+      "title": "Accueil",
+      "description": "SY'ONE accompagne les institutions financières dans leurs transformations digitales, technologiques et opérationnelles."
+    },
+    "hero": {
+      "title": "De la stratégie à l'exécution, nous transformons vos ambitions en <accent>résultats.</accent>",
+      "subtitle": "SY'ONE accompagne les institutions financières et les acteurs stratégiques dans leurs transformations critiques, de la vision à la performance durable."
+    },
+    "intro": {
+      "text": "SY'ONE est un cabinet de conseil spécialisé dans la transformation digitale, l'IT, la Data, l'IA et la performance opérationnelle. Nous intervenons là où les cabinets classiques s'arrêtent souvent : au point de passage entre la recommandation stratégique, la complexité réelle du terrain et l'exécution effective des transformations."
+    },
+    "positioning": {
+      "text": "Notre valeur ne repose pas uniquement sur des livrables de cadrage. Elle repose sur notre capacité à sécuriser les arbitrages, structurer les trajectoires, mobiliser les bonnes expertises et accompagner les organisations jusqu'aux résultats attendus."
+    },
+    "pillars": {
+      "eyebrow": "Pourquoi SY'ONE",
+      "title": "Un partenaire de confiance pour des transformations qui produisent des <accent>résultats.</accent>",
+      "intro": "Nous combinons vision stratégique, ancrage métier et capacité d'exécution pour transformer vos ambitions en trajectoires concrètes et mesurables.",
+      "items": [
+        {
+          "title": "Vision stratégique et impact",
+          "description": "Nous alignons vos ambitions avec des trajectoires claires, réalistes et orientées valeur."
+        },
+        {
+          "title": "Excellence opérationnelle",
+          "description": "Nous optimisons l'exécution avec méthode, discipline et sens du résultat."
+        },
+        {
+          "title": "Expertise sectorielle approfondie",
+          "description": "Une connaissance fine des institutions financières pour des solutions adoptées."
+        },
+        {
+          "title": "Engagement et résultats",
+          "description": "Nous nous engageons sur l'impact et accélérons la performance dans la durée."
+        }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Cas d'usage / Références",
+      "title": "Des transformations concrètes, des résultats durables.",
+      "subtitle": "Des transformations concrètes, une posture orientée résultats."
+    },
+    "expertises": {
+      "eyebrow": "Expertises",
+      "title": "Des expertises clés, au service de vos priorités stratégiques.",
+      "teaserItems": [
+        {
+          "title": "Stratégie & Transformations",
+          "description": "Définir la vision, aligner les priorités et piloter des transformations à fort impact.",
+          "icon": "strategy"
+        },
+        {
+          "title": "Digital, Data & IA",
+          "description": "Exploiter la data et l'IA pour créer de la valeur et améliorer l'expérience client.",
+          "icon": "data"
+        },
+        {
+          "title": "Opérations & Performance",
+          "description": "Optimiser les processus et les organisations pour renforcer l'efficacité et réduire les coûts.",
+          "icon": "performance"
+        },
+        {
+          "title": "Conformité & Risques",
+          "description": "Renforcer la gestion des risques, la conformité et la résilience opérationnelle.",
+          "icon": "compliance"
+        }
+      ]
+    },
+    "approach": {
+      "eyebrow": "Notre approche",
+      "title": "Une méthode en 5 étapes, de l'intention à l'impact."
+    },
+    "team": {
+      "eyebrow": "Fondateurs & Réseau d'experts",
+      "title": "L'expérience des fondateurs, la force d'un réseau d'experts."
+    },
+    "cta": {
+      "title": "Parlons de vos enjeux et construisons ensemble votre prochaine trajectoire.",
+      "subtitle": "Un échange confidentiel pour comprendre vos priorités et explorer comment nous pouvons créer de la valeur pour votre organisation.",
+      "note": "Le formulaire est disponible sur la page Contact."
+    },
+    "stats": {
+      "items": [
+        {
+          "value": "15+",
+          "label": "ans d'expérience auprès des institutions financières"
+        },
+        {
+          "value": "120+",
+          "label": "missions réalisées dans plus de vingt pays"
+        },
+        {
+          "value": "250+",
+          "label": "missions de transformation réussies dans des banques de premier rang"
+        },
+        {
+          "value": "20+",
+          "label": "acteurs accompagnés (banques, assurances, sociétés financières)"
+        }
+      ]
+    }
+  },
+  "expertises": {
+    "meta": {
+      "title": "Expertises",
+      "description": "SY'ONE concentre son intervention sur un spectre ciblé d'expertises pour les institutions financières."
+    },
+    "hero": {
+      "title": "Expertises",
+      "subtitle": "SY'ONE concentre son intervention sur un spectre ciblé d'expertises, au service des institutions financières. Notre promesse est d'apporter le bon niveau de spécialisation sans diluer la lisibilité de notre valeur."
+    },
+    "items": [
+      {
+        "title": "Digital Banking & expérience client",
+        "description": "Conception et transformation de parcours clients, plateformes digitales, offres omnicanales, e-KYC, CRM, marketing digital et adoption.",
+        "icon": "banking"
+      },
+      {
+        "title": "IT, architecture & plateformes",
+        "description": "Architecture d'entreprise, urbanisation, API, intégration, cloud, cybersécurité, résilience et transformation des plateformes.",
+        "icon": "architecture"
+      },
+      {
+        "title": "Data, IA & automatisation",
+        "description": "Gouvernance Data, valorisation des données, priorisation de cas d'usage IA, automatisation et pilotage par la valeur.",
+        "icon": "data"
+      },
+      {
+        "title": "Operating model & delivery",
+        "description": "Structuration de tribes, squads, Digital Factory, PMO d'exécution, Agile@Scale, staffing, gestion des dépendances et gouvernance.",
+        "icon": "delivery"
+      },
+      {
+        "title": "Performance opérationnelle",
+        "description": "Refonte de processus, amélioration de la qualité de service, optimisation des coûts, KPI, SLA et efficacité opérationnelle.",
+        "icon": "performance"
+      },
+      {
+        "title": "Transformation des métiers financiers",
+        "description": "Accompagnement des métiers du Retail Banking, Corporate Banking, BFI, crédit, risques, conformité et expérience collaborateur.",
+        "icon": "finance"
+      }
+    ]
+  },
+  "approach": {
+    "meta": {
+      "title": "Notre approche",
+      "description": "Une approche conçue pour transformer les décisions en résultats."
+    },
+    "hero": {
+      "title": "Une approche conçue pour transformer les décisions en résultats.",
+      "subtitle": "Nos missions sont volontairement orientées exécution. Nous combinons vision, sélectivité, gouvernance et capacité de mobilisation pour transformer des ambitions souvent complexes en trajectoires concrètes et pilotables."
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "Aligner",
+        "description": "Clarifier la vision, les objectifs, les sponsors, les contraintes et les critères de succès."
+      },
+      {
+        "number": "02",
+        "title": "Prioriser",
+        "description": "Évaluer la valeur métier, la complexité, les risques et les dépendances afin de concentrer l'effort sur l'essentiel."
+      },
+      {
+        "number": "03",
+        "title": "Structurer",
+        "description": "Définir le MVP, les releases, le modèle cible, le budget, le staffing et la gouvernance."
+      },
+      {
+        "number": "04",
+        "title": "Orchestrer",
+        "description": "Coordonner métiers, IT, Data, architecture, sécurité et delivery autour d'une trajectoire exécutable."
+      },
+      {
+        "number": "05",
+        "title": "Mesurer",
+        "description": "Suivre l'adoption, la performance, les risques et la valeur produite pour ajuster rapidement la trajectoire."
+      }
+    ],
+    "keyMessage": "SY'ONE se positionne là où beaucoup de cabinets s'arrêtent : entre le diagnostic, l'arbitrage stratégique et la réalité du delivery."
+  },
+  "team": {
+    "meta": {
+      "title": "Équipe & réseau d'experts",
+      "description": "SY'ONE s'appuie sur un réseau activable de consultants et d'experts seniors."
+    },
+    "hero": {
+      "title": "Équipe & réseau d'experts",
+      "subtitle": "SY'ONE ne se limite pas aux deux fondateurs comme seules ressources de delivery. Le cabinet s'appuie sur un réseau activable de consultants et d'experts seniors, sélectionnés pour leur niveau, leur spécialisation et leur capacité à intervenir rapidement sur des problématiques ciblées."
+    },
+    "complement": "Les fondateurs restent néanmoins directement impliqués dans le cadrage, les arbitrages structurants et la garantie de qualité des missions. Ils constituent le point d'ancrage de la relation client et s'assurent que les interventions restent cohérentes, exigeantes et orientées résultats.",
+    "foundersTitle": "Fondateurs",
+    "networkTitle": "Réseau d'experts",
+    "founders": [
+      {
+        "name": "Yassine Ziad",
+        "role": "Fondateur & Associé",
+        "bio": "Expert en stratégie, transformation digitale, gouvernance IT et pilotage de programmes complexes. 18 années d'expérience dans le secteur bancaire, avec des responsabilités de direction couvrant l'innovation, le Digital Banking, la production informatique, le pilotage budgétaire et la conduite de programmes structurants.",
+        "linkedin": "https://www.linkedin.com/in/ziadyassine",
+        "initials": "YZ",
+        "shortBio": "25 années d'expérience en stratégie, transformation digitale et gouvernance IT au sein d'institutions financières."
+      },
+      {
+        "name": "Youssef Zerrari",
+        "role": "Fondateur & Associé",
+        "bio": "Expert en Digital Banking, architecture, technologie, operating models et transformation à l'échelle. Parcours de direction au sein d'établissements financiers de premier plan, avec des responsabilités exécutives en stratégie digitale, innovation, Digital Factory, Agile@Scale et customer success.",
+        "linkedin": "https://www.linkedin.com/in/youssef-zerrari-17ba993",
+        "initials": "YZ",
+        "shortBio": "20 années d'expérience en Digital Banking, architecture et transformation à l'échelle dans des établissements de premier plan."
+      }
+    ],
+    "network": [
+      "Experts Digital Banking et expérience client",
+      "Architectes d'entreprise et experts IT / cloud / API",
+      "Experts Data, IA et automatisation",
+      "Profils cybersécurité et résilience",
+      "Experts delivery, PMO, Agile et transformation organisationnelle",
+      "Spécialistes performance opérationnelle et conduite du changement"
+    ],
+    "networkCardTitle": "Un réseau d'experts chevronnés",
+    "networkCardText": "Un réseau activable de consultants et d'experts seniors, sélectionnés pour leur niveau, leur spécialisation et leur capacité à intervenir rapidement."
+  },
+  "cases": {
+    "meta": {
+      "title": "Références / cas d'usage",
+      "description": "Références anonymisées illustrant le type de transformations accompagnées par SY'ONE."
+    },
+    "hero": {
+      "title": "Références / cas d'usage",
+      "subtitle": "Pour des raisons de confidentialité, les références sont présentées sous forme anonymisée. L'objectif est de donner à voir le type de transformation accompagnée, la posture de SY'ONE et la nature de la valeur créée."
+    },
+    "items": [
+      {
+        "id": "bfi",
+        "category": "BANQUE & FINANCE",
+        "title": "Transformation BFI",
+        "challenge": "Structurer un programme stratégique pour des équipes BFI.",
+        "value": "Vision cible, MVP, gouvernance et décisions d'investissement sécurisées.",
+        "image": "/cases/bfi.jpg",
+        "metrics": [
+          {
+            "value": "-18%",
+            "label": "Coûts opérationnels"
+          },
+          {
+            "value": "+25%",
+            "label": "Productivité"
+          }
+        ]
+      },
+      {
+        "id": "digital-banking",
+        "category": "BANQUE DIGITALE",
+        "title": "Accélération Digital Banking",
+        "challenge": "Accélérer la feuille de route digitale et les parcours clients.",
+        "value": "Services digitaux lancés et expérience omnicanale renforcée.",
+        "image": "/cases/digital.jpg",
+        "metrics": [
+          {
+            "value": "+40%",
+            "label": "Adoption digitale"
+          },
+          {
+            "value": "-30%",
+            "label": "Time-to-market"
+          }
+        ]
+      },
+      {
+        "id": "data-ia",
+        "category": "DATA & IA",
+        "title": "Gouvernance Data & IA",
+        "challenge": "Cadre de gouvernance et priorisation des cas d'usage IA.",
+        "value": "Alignement métiers, données et capacité d'exécution.",
+        "image": "/cases/data.jpg",
+        "metrics": [
+          {
+            "value": "+35%",
+            "label": "Cas d'usage activés"
+          },
+          {
+            "value": "x2",
+            "label": "Valeur data"
+          }
+        ]
+      },
+      {
+        "id": "process",
+        "category": "PERFORMANCE OPÉRATIONNELLE",
+        "title": "Amélioration de la performance",
+        "challenge": "Optimiser les processus à forts enjeux métier.",
+        "value": "Efficacité opérationnelle et qualité de service améliorées.",
+        "image": "/cases/performance.jpg",
+        "metrics": [
+          {
+            "value": "-22%",
+            "label": "Délais de traitement"
+          },
+          {
+            "value": "+15%",
+            "label": "Qualité de service"
+          }
+        ]
+      },
+      {
+        "id": "digital-factory",
+        "category": "DELIVERY & AGILE",
+        "title": "Création et accélération d'une Digital Factory",
+        "challenge": "Mise en place d'un modèle opérationnel visant à accélérer la livraison de solutions digitales.",
+        "value": "Structuration des équipes, renforcement de l'agilité et amélioration de l'alignement entre technologie et business.",
+        "image": "/cases/it.jpg",
+        "metrics": [
+          {
+            "value": "+50%",
+            "label": "Vélocité delivery"
+          },
+          {
+            "value": "-35%",
+            "label": "Dépendances"
+          }
+        ]
+      },
+      {
+        "id": "it-performance",
+        "category": "IT & OPÉRATIONS",
+        "title": "Performance IT et opérations",
+        "challenge": "Environnements critiques nécessitant renforcement de la résilience et maîtrise des coûts.",
+        "value": "Optimisation des opérations, amélioration des dispositifs de pilotage et maîtrise des coûts.",
+        "image": "/cases/process.jpg",
+        "metrics": [
+          {
+            "value": "-20%",
+            "label": "Coûts IT"
+          },
+          {
+            "value": "+99.9%",
+            "label": "Résilience"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Contactez SY'ONE pour cadrer une transformation ou accélérer un programme en cours."
+    },
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Vous souhaitez cadrer une transformation, sécuriser une décision structurante ou accélérer un programme en cours ? Échangeons sur vos enjeux et sur les expertises les plus pertinentes à mobiliser."
+    },
+    "phone": "+212 6 61 16 12 35",
+    "email": "contact@syone-consulting.com",
+    "emailSecondary": "y.ziad@syone-consulting.com",
+    "socialTitle": "Réseaux sociaux",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail professionnel",
+      "company": "Entreprise",
+      "phone": "Téléphone",
+      "need": "Besoin principal",
+      "needPlaceholder": "Transformation digitale, Data & IA, Digital Factory...",
+      "message": "Message",
+      "consent": "J'accepte que mes données soient traitées conformément à la politique de confidentialité.",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Votre message a bien été envoyé. Nous vous recontacterons rapidement.",
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter par e-mail."
+    }
+  },
+  "legal": {
+    "meta": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site SY'ONE Consulting."
+    },
+    "title": "Mentions légales",
+    "sections": [
+      {
+        "title": "Éditeur du site",
+        "content": "Le site syone-consulting.com est édité par SY'ONE Consulting. Contact : contact@syone-consulting.com"
+      },
+      {
+        "title": "Hébergement",
+        "content": "Les informations d'hébergement seront complétées lors du déploiement en production."
+      },
+      {
+        "title": "Propriété intellectuelle",
+        "content": "L'ensemble des contenus présents sur ce site (textes, visuels, logo, structure) est protégé par le droit de la propriété intellectuelle. Toute reproduction sans autorisation est interdite."
+      },
+      {
+        "title": "Responsabilité",
+        "content": "SY'ONE Consulting s'efforce d'assurer l'exactitude des informations publiées. Toutefois, le cabinet ne saurait être tenu responsable des erreurs, omissions ou indisponibilités temporaires du site."
+      }
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité",
+      "description": "Politique de confidentialité et traitement des données personnelles."
+    },
+    "title": "Politique de confidentialité",
+    "sections": [
+      {
+        "title": "Données collectées",
+        "content": "Via le formulaire de contact, nous collectons : nom, e-mail professionnel, entreprise, téléphone, besoin principal et message."
+      },
+      {
+        "title": "Finalité du traitement",
+        "content": "Ces données sont utilisées exclusivement pour répondre à votre demande de contact et échanger sur vos enjeux de transformation."
+      },
+      {
+        "title": "Destinataires",
+        "content": "Les messages sont adressés à contact@syone-consulting.com et peuvent être transmis à y.ziad@syone-consulting.com."
+      },
+      {
+        "title": "Conservation",
+        "content": "Les données sont conservées pendant la durée nécessaire au traitement de votre demande, puis archivées ou supprimées conformément aux obligations légales."
+      },
+      {
+        "title": "Vos droits",
+        "content": "Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez-nous à contact@syone-consulting.com."
+      }
+    ]
+  }
+}
