@@ -53,23 +53,23 @@
     "pillars": {
       "eyebrow": "Pourquoi SY'ONE",
       "title": "Un partenaire de confiance pour des transformations qui produisent des <accent>résultats.</accent>",
-      "intro": "Nous combinons vision stratégique, ancrage métier et capacité d'exécution pour transformer vos ambitions en trajectoires concrètes et mesurables.",
+      "intro": "Nous combinons vision stratégique, excellence opérationnelle et esprit terrain éclairé pour concevoir et exécuter des transformations à fort impact, mesurables et durables.",
       "items": [
         {
           "title": "Vision stratégique et impact",
-          "description": "Nous alignons vos ambitions avec des trajectoires claires, réalistes et orientées valeur."
+          "description": "Nous alignons stratégie, priorités et exécution pour générer des résultats concrets et durables."
         },
         {
           "title": "Excellence opérationnelle",
-          "description": "Nous optimisons l'exécution avec méthode, discipline et sens du résultat."
+          "description": "Nous optimisons vos processus, vos organisations et vos modèles pour maximiser la performance."
         },
         {
           "title": "Expertise sectorielle approfondie",
-          "description": "Une connaissance fine des institutions financières pour des solutions adoptées."
+          "description": "Une connaissance fine des enjeux des institutions financières et des secteurs régulés."
         },
         {
           "title": "Engagement et résultats",
-          "description": "Nous nous engageons sur l'impact et accélérons la performance dans la durée."
+          "description": "Nous nous engageons sur des objectifs clairs et mesurables, avec une exigence de qualité."
         }
       ]
     },
@@ -275,7 +275,7 @@
         "title": "Transformation BFI",
         "challenge": "Structurer un programme stratégique pour des équipes BFI.",
         "value": "Vision cible, MVP, gouvernance et décisions d'investissement sécurisées.",
-        "image": "/cases/bfi.jpg",
+        "image": "/images/image1.webp",
         "metrics": [
           {
             "value": "-18%",
@@ -293,15 +293,15 @@
         "title": "Accélération Digital Banking",
         "challenge": "Accélérer la feuille de route digitale et les parcours clients.",
         "value": "Services digitaux lancés et expérience omnicanale renforcée.",
-        "image": "/cases/digital.jpg",
+        "image": "/images/image2.webp",
         "metrics": [
           {
-            "value": "+40%",
-            "label": "Adoption digitale"
+            "value": "-40%",
+            "label": "Time-to-market"
           },
           {
-            "value": "-30%",
-            "label": "Time-to-market"
+            "value": "+30%",
+            "label": "Adoption digitale"
           }
         ]
       },
@@ -311,15 +311,15 @@
         "title": "Gouvernance Data & IA",
         "challenge": "Cadre de gouvernance et priorisation des cas d'usage IA.",
         "value": "Alignement métiers, données et capacité d'exécution.",
-        "image": "/cases/data.jpg",
+        "image": "/images/image3.webp",
         "metrics": [
           {
-            "value": "+35%",
-            "label": "Cas d'usage activés"
+            "value": "100%",
+            "label": "Conformité data"
           },
           {
-            "value": "x2",
-            "label": "Valeur data"
+            "value": "+22%",
+            "label": "Valeur créée"
           }
         ]
       },
@@ -329,14 +329,14 @@
         "title": "Amélioration de la performance",
         "challenge": "Optimiser les processus à forts enjeux métier.",
         "value": "Efficacité opérationnelle et qualité de service améliorées.",
-        "image": "/cases/performance.jpg",
+        "image": "/images/image4.webp",
         "metrics": [
           {
-            "value": "-22%",
-            "label": "Délais de traitement"
+            "value": "-15%",
+            "label": "Coûts"
           },
           {
-            "value": "+15%",
+            "value": "+20%",
             "label": "Qualité de service"
           }
         ]

@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Crisp vector light-ribbon for the hero right side.
- * SVG stays sharp at any screen size (avoids soft upscaled raster).
+ * Light trails use mix-blend-mode:screen so black plate vanishes into navy-deep.
+ * Left/right colors stay identical; trails stay soft (not over-sharp).
  */
 export function HeroLightArtwork() {
   return (
@@ -10,17 +10,7 @@ export function HeroLightArtwork() {
       className="pointer-events-none absolute inset-0 overflow-hidden"
       aria-hidden="true"
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(ellipse 50% 60% at 78% 55%, rgba(5,105,255,0.2), transparent 65%),
-            radial-gradient(ellipse 35% 40% at 90% 40%, rgba(22,188,235,0.12), transparent 55%)
-          `,
-        }}
-      />
-
-      <div className="absolute top-[2%] bottom-0 right-0 w-full sm:w-[82%] lg:w-[74%]">
+      <div className="absolute inset-y-0 right-0 w-full sm:w-[78%] lg:w-[68%]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/hero/trails-exact.png"
@@ -29,16 +19,21 @@ export function HeroLightArtwork() {
           height={1024}
           decoding="async"
           fetchPriority="high"
-          className="h-full w-full object-contain object-right-bottom sm:object-[100%_55%]"
+          className="h-full w-full object-cover object-[5%_55%] mix-blend-screen"
+          style={{ opacity: 0.82 }}
         />
 
+        {/* Soft veil into the text side */}
         <div
           className="absolute inset-0"
           style={{
             background: `
-              linear-gradient(90deg, #020B2B 0%, rgba(2,11,43,0.88) 5%, rgba(2,11,43,0.3) 20%, transparent 38%),
-              linear-gradient(180deg, rgba(2,11,43,0.22) 0%, transparent 12%),
-              linear-gradient(0deg, rgba(2,11,43,0.15) 0%, transparent 14%)
+              linear-gradient(90deg,
+                #010A29 0%,
+                rgba(1,10,41,0.65) 14%,
+                rgba(1,10,41,0.2) 32%,
+                transparent 50%
+              )
             `,
           }}
         />

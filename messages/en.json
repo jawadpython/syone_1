@@ -53,23 +53,23 @@
     "pillars": {
       "eyebrow": "Why SY'ONE",
       "title": "A trusted partner for transformations that deliver <accent>results.</accent>",
-      "intro": "We combine strategic vision, business grounding and execution capability to turn ambitions into concrete, measurable trajectories.",
+      "intro": "We combine strategic vision, operational excellence and grounded field expertise to design and execute high-impact, measurable and lasting transformations.",
       "items": [
         {
           "title": "Strategic vision and impact",
-          "description": "We align ambitions with clear, realistic, value-driven trajectories."
+          "description": "We align strategy, priorities and execution to generate concrete, lasting results."
         },
         {
           "title": "Operational excellence",
-          "description": "We optimize execution with method, discipline and a results mindset."
+          "description": "We optimize your processes, organizations and models to maximize performance."
         },
         {
           "title": "Deep sector expertise",
-          "description": "Deep knowledge of financial institutions for adopted solutions."
+          "description": "Deep knowledge of the challenges facing financial institutions and regulated industries."
         },
         {
           "title": "Commitment and results",
-          "description": "We commit to impact and accelerate lasting performance."
+          "description": "We commit to clear, measurable objectives, with an uncompromising quality standard."
         }
       ]
     },
@@ -275,7 +275,7 @@
         "title": "IB Transformation",
         "challenge": "Structure a strategic program for investment banking teams.",
         "value": "Target vision, MVP, governance and investment decisions secured.",
-        "image": "/cases/bfi.jpg",
+        "image": "/images/image1.webp",
         "metrics": [
           {
             "value": "-18%",
@@ -293,15 +293,15 @@
         "title": "Digital Banking acceleration",
         "challenge": "Accelerate the digital roadmap and customer journeys.",
         "value": "Digital services launched and omnichannel experience strengthened.",
-        "image": "/cases/digital.jpg",
+        "image": "/images/image2.webp",
         "metrics": [
           {
-            "value": "+40%",
-            "label": "Digital adoption"
+            "value": "-40%",
+            "label": "Time-to-market"
           },
           {
-            "value": "-30%",
-            "label": "Time-to-market"
+            "value": "+30%",
+            "label": "Digital adoption"
           }
         ]
       },
@@ -311,15 +311,15 @@
         "title": "Data & AI governance",
         "challenge": "Governance framework and AI use-case prioritization.",
         "value": "Alignment of business, data and execution capability.",
-        "image": "/cases/data.jpg",
+        "image": "/images/image3.webp",
         "metrics": [
           {
-            "value": "+35%",
-            "label": "Use cases activated"
+            "value": "100%",
+            "label": "Data compliance"
           },
           {
-            "value": "x2",
-            "label": "Data value"
+            "value": "+22%",
+            "label": "Value created"
           }
         ]
       },
@@ -329,14 +329,14 @@
         "title": "Performance improvement",
         "challenge": "Optimize high-stakes business processes.",
         "value": "Improved operational efficiency and service quality.",
-        "image": "/cases/performance.jpg",
+        "image": "/images/image4.webp",
         "metrics": [
           {
-            "value": "-22%",
-            "label": "Processing time"
+            "value": "-15%",
+            "label": "Costs"
           },
           {
-            "value": "+15%",
+            "value": "+20%",
             "label": "Service quality"
           }
         ]

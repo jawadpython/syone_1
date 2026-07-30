@@ -46,31 +46,26 @@ const icons = {
   vision: (
     <>
       <circle cx="12" cy="12" r="8" />
-      <circle cx="12" cy="12" r="3" />
-      <path strokeLinecap="round" d="M12 4v2M12 18v2M4 12h2M18 12h2" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16 8l2-3" />
+      <circle cx="12" cy="12" r="2.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14.5 9.5L20 4M17 4h3v3" />
     </>
   ),
   execution: (
     <>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M4 19V9l4 2 4-4 4 3 4-2v11" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 19V10l3 2 3-5 3 3 3-2v11" />
       <path strokeLinecap="round" d="M4 19h16" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16 9l3-4" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16 8l3-4h-3" />
     </>
   ),
   anchor: (
     <>
+      <circle cx="12" cy="8" r="3" />
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M9 18h6M12 14v4M12 8a2 2 0 100-4 2 2 0 000 4z"
+        d="M6 20c0-3.5 2.5-6 6-6s6 2.5 6 6"
       />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8 11c0 2.5 1.5 4 4 5 2.5-1 4-2.5 4-5"
-      />
-      <path d="M9 9.5C7 10 5.5 12 5.5 14.5S8 19 12 19s6.5-2 6.5-4.5S17 10 15 9.5" />
+      <path strokeLinecap="round" d="M12 11v3M10.5 13.5h3" />
     </>
   ),
   value: (

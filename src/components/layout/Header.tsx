@@ -99,24 +99,26 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-white px-6 py-6 xl:hidden">
-          <nav className="flex flex-col gap-5" aria-label="Mobile">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className="text-base text-text-gray"
-                onClick={() => setMobileOpen(false)}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-          </nav>
-          <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
-            <LanguageSwitcher />
-            <Button href="/contact" variant="primary" showArrow>
-              {t("cta")}
-            </Button>
+        <div className="border-t border-border bg-white py-6 xl:hidden">
+          <div className="container-grid">
+            <nav className="flex flex-col gap-5" aria-label="Mobile">
+              {navItems.map((item) => (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className="text-base text-text-gray"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {t(item.key)}
+                </Link>
+              ))}
+            </nav>
+            <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
+              <LanguageSwitcher />
+              <Button href="/contact" variant="primary" showArrow>
+                {t("cta")}
+              </Button>
+            </div>
           </div>
         </div>
       )}
