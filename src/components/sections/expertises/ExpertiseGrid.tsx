@@ -40,7 +40,7 @@ export function ExpertiseGrid({ teaser = false, hideHeader = false }: ExpertiseG
             )}
           </div>
           {teaser && (
-            <Button href="/expertises" variant="outline-blue" className="shrink-0">
+            <Button href="/expertises" variant="outline-blue" className="w-full shrink-0 sm:w-auto">
               {tCommon("discoverAllExpertises")}
             </Button>
           )}

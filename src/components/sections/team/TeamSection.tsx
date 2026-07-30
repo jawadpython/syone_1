@@ -34,7 +34,7 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
             {teaser ? tHome("title") : tTeam("hero.title")}
           </h2>
           {teaser && (
-            <Button href="/equipe" variant="outline-blue" className="shrink-0">
+            <Button href="/equipe" variant="outline-blue" className="w-full shrink-0 sm:w-auto">
               {tCommon("learnMore")}
             </Button>
           )}
@@ -58,7 +58,7 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
             key={founder.name}
             className="flex min-h-[168px] overflow-hidden rounded-xl border border-border bg-white shadow-card"
           >
-            <div className="relative w-[38%] min-w-[7.5rem] shrink-0 self-stretch bg-bg-mist">
+            <div className="relative w-[36%] min-w-[6.5rem] shrink-0 self-stretch bg-bg-mist sm:min-w-[7.5rem] sm:w-[38%]">
               {founderPhotos[founder.name] ? (
                 <Image
                   src={founderPhotos[founder.name]}

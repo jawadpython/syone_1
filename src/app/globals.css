@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-white text-text-gray antialiased;
+    @apply overflow-x-hidden bg-white text-text-gray antialiased;
   }
 
   h1,
@@ -26,12 +26,34 @@
   .container-grid {
     @apply mx-auto w-full;
     max-width: 100%;
-    padding-left: 4cm;
-    padding-right: 4cm;
+    /* Mobile-first: comfortable gutters; keep 4cm on large screens */
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-grid {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-grid {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-grid {
+      padding-left: 4cm;
+      padding-right: 4cm;
+    }
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-20 lg:py-24;
   }
 
   .eyebrow {

@@ -39,7 +39,7 @@ export function ApproachSteps({ teaser = false }: ApproachStepsProps) {
             <h2 className="max-w-xl font-serif text-3xl font-medium leading-tight text-navy md:text-[2.1rem]">
               {tHome("title")}
             </h2>
-            <Button href="/notre-approche" variant="outline-blue" className="shrink-0">
+            <Button href="/notre-approche" variant="outline-blue" className="w-full shrink-0 sm:w-auto">
               {tCommon("learnMore")}
             </Button>
           </div>

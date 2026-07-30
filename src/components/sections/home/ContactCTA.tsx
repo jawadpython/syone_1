@@ -43,7 +43,7 @@ export function ContactCTA() {
           {t("subtitle")}
         </p>
         <div className="md:justify-self-end">
-          <Button href="/contact" variant="primary" showArrow>
+          <Button href="/contact" variant="primary" showArrow className="w-full justify-center sm:w-auto">
             {tCommon("contactUs")}
           </Button>
           <p className="mt-3 text-xs text-text-muted">{t("note")}</p>

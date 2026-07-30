@@ -19,7 +19,7 @@ function CaseStudyCard({ item }: { item: CaseStudy }) {
   const t = useTranslations("common");
 
   return (
-    <article className="flex h-full min-h-[34rem] flex-col overflow-hidden rounded-lg border border-border bg-white shadow-card md:min-h-[36rem]">
+    <article className="flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-white shadow-card md:min-h-[36rem]">
       <div className="relative mx-4 mt-4 overflow-hidden rounded-md">
         <div className="relative aspect-[16/9] w-full">
           <Image
@@ -92,12 +92,12 @@ export function CaseStudyGrid({
         <div className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-start md:justify-between md:gap-8">
           <div className="max-w-2xl">
             <p className="eyebrow">{t("eyebrow")}</p>
-            <h2 className="font-serif text-3xl font-medium leading-tight text-navy md:text-[2.35rem]">
+            <h2 className="font-serif text-[1.75rem] font-medium leading-tight text-navy sm:text-3xl md:text-[2.35rem]">
               {t("title")}
             </h2>
           </div>
           {showViewAll && (
-            <Button href="/cas-d-usage" variant="outline-blue" className="shrink-0 self-start md:mt-7">
+            <Button href="/cas-d-usage" variant="outline-blue" className="w-full shrink-0 self-start sm:w-auto md:mt-7">
               {tCommon("viewAllCases")}
             </Button>
           )}

@@ -13,7 +13,7 @@ export function ValuePillars() {
       <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.7fr)] lg:gap-12 xl:gap-16">
         <div>
           <p className="eyebrow">{t("eyebrow")}</p>
-          <h2 className="max-w-lg font-serif text-3xl font-medium leading-[1.2] tracking-tight text-navy md:text-[2.35rem]">
+          <h2 className="max-w-lg font-serif text-[1.75rem] font-medium leading-[1.2] tracking-tight text-navy sm:text-3xl md:text-[2.35rem]">
             {t.rich("title", {
               accent: (chunks) => <span className="text-electric">{chunks}</span>,
             })}
