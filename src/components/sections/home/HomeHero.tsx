@@ -6,7 +6,6 @@ import { HeroLightArtwork } from "./HeroLightArtwork";
 
 export function HomeHero() {
   const t = useTranslations("home.hero");
-  const tNav = useTranslations("nav");
   const tCommon = useTranslations("common");
 
   return (
@@ -23,11 +22,11 @@ export function HomeHero() {
             {t("subtitle")}
           </p>
           <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
-            <Button href="/contact" variant="primary" showArrow className="w-full justify-center sm:w-auto">
-              {tNav("cta")}
+            <Button href="/expertises" variant="primary" showArrow className="w-full justify-center sm:w-auto">
+              {tCommon("discoverExpertises")}
             </Button>
-            <Button href="/cas-d-usage" variant="outline-light" className="w-full justify-center sm:w-auto">
-              {tCommon("viewCases")}
+            <Button href="/contact" variant="outline-light" className="w-full justify-center sm:w-auto">
+              {tCommon("discussProject")}
             </Button>
           </div>
         </div>

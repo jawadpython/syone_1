@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/notre-approche" as const, key: "approach" },
   { href: "/cas-d-usage" as const, key: "cases" },
   { href: "/equipe" as const, key: "team" },
+  { href: "/contact" as const, key: "contact" },
 ];
 
 export function Footer() {
