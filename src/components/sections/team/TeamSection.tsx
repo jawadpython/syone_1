@@ -8,8 +8,8 @@ interface TeamSectionProps {
 }
 
 const founderPhotos: Record<string, string> = {
-  "Yassine Ziad": "/team/yassine-ziad.jpg",
-  "Youssef Zerrari": "/team/youssef-zerrari.jpg",
+  "Yassine Ziad": "/images/yassine-ziad.jpeg",
+  "Youssef Zerrari": "/images/youssef-zerrari.webp",
 };
 
 export function TeamSection({ teaser = false }: TeamSectionProps) {
