@@ -8,6 +8,7 @@ import { TeamSection } from "@/components/sections/team/TeamSection";
 import { ContactCTA } from "@/components/sections/home/ContactCTA";
 import { HomeHero } from "@/components/sections/home/HomeHero";
 import { StatsStrip } from "@/components/sections/home/StatsStrip";
+import { getCaseStudies, getFounders, type LocaleCode } from "@/sanity/fetch";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,16 +28,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const lang = locale as LocaleCode;
+  const [caseStudies, founders] = await Promise.all([
+    getCaseStudies(lang),
+    getFounders(lang),
+  ]);
 
   return (
     <>
       <HomeHero />
       <ValuePillars />
-      <CaseStudyGrid limit={4} showViewAll />
+      <CaseStudyGrid limit={4} showViewAll itemsFromCms={caseStudies} />
       <StatsStrip />
       <ExpertiseGrid teaser />
       <ApproachSteps teaser />
-      <TeamSection teaser />
+      <TeamSection teaser foundersFromCms={founders} />
       <ContactCTA />
     </>
   );

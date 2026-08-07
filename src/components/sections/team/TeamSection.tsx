@@ -2,9 +2,11 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/SectionContainer";
+import type { FounderContent } from "@/sanity/fetch";
 
 interface TeamSectionProps {
   teaser?: boolean;
+  foundersFromCms?: FounderContent[];
 }
 
 const founderPhotos: Record<string, string> = {
@@ -12,18 +14,13 @@ const founderPhotos: Record<string, string> = {
   "Youssef Zerrari": "/images/youssef-zerrari.webp",
 };
 
-export function TeamSection({ teaser = false }: TeamSectionProps) {
+export function TeamSection({ teaser = false, foundersFromCms }: TeamSectionProps) {
   const tHome = useTranslations("home.team");
   const tTeam = useTranslations("team");
   const tCommon = useTranslations("common");
-  const founders = tTeam.raw("founders") as {
-    name: string;
-    role: string;
-    bio: string;
-    linkedin: string;
-    initials: string;
-    shortBio?: string;
-  }[];
+  const fallbackFounders = tTeam.raw("founders") as FounderContent[];
+  const founders =
+    foundersFromCms && foundersFromCms.length > 0 ? foundersFromCms : fallbackFounders;
 
   return (
     <SectionContainer variant="white">
@@ -59,9 +56,9 @@ export function TeamSection({ teaser = false }: TeamSectionProps) {
             className="flex min-h-[168px] overflow-hidden rounded-xl border border-border bg-white shadow-card"
           >
             <div className="relative w-[36%] min-w-[6.5rem] shrink-0 self-stretch bg-bg-mist sm:min-w-[7.5rem] sm:w-[38%]">
-              {founderPhotos[founder.name] ? (
+              {founder.photoUrl || founderPhotos[founder.name] ? (
                 <Image
-                  src={founderPhotos[founder.name]}
+                  src={founder.photoUrl || founderPhotos[founder.name]}
                   alt={founder.name}
                   fill
                   className="object-cover object-[center_20%]"

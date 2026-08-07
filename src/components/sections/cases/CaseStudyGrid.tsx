@@ -73,17 +73,20 @@ interface CaseStudyGridProps {
   limit?: number;
   showHeader?: boolean;
   showViewAll?: boolean;
+  itemsFromCms?: CaseStudy[];
 }
 
 export function CaseStudyGrid({
   limit,
   showHeader = true,
   showViewAll = false,
+  itemsFromCms,
 }: CaseStudyGridProps) {
   const t = useTranslations("home.cases");
   const tCases = useTranslations("cases");
   const tCommon = useTranslations("common");
-  const items = tCases.raw("items") as CaseStudy[];
+  const fallbackItems = tCases.raw("items") as CaseStudy[];
+  const items = itemsFromCms && itemsFromCms.length > 0 ? itemsFromCms : fallbackItems;
   const displayed = limit ? items.slice(0, limit) : items;
 
   return (

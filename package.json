@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/image-url": "^2.1.1",
     "framer-motion": "^11.18.2",
     "next": "^15.1.0",
     "next-intl": "^3.26.3",
+    "next-sanity": "^11.6.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
