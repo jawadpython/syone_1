@@ -2,13 +2,19 @@ import { useTranslations } from "next-intl";
 import { Icon, IconName } from "@/components/icons/Icons";
 import { Button } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/SectionContainer";
+import type { ExpertiseContent } from "@/sanity/fetch";
 
 interface ExpertiseGridProps {
   teaser?: boolean;
   hideHeader?: boolean;
+  itemsFromCms?: ExpertiseContent[];
 }
 
-export function ExpertiseGrid({ teaser = false, hideHeader = false }: ExpertiseGridProps) {
+export function ExpertiseGrid({
+  teaser = false,
+  hideHeader = false,
+  itemsFromCms,
+}: ExpertiseGridProps) {
   const tHome = useTranslations("home.expertises");
   const tExpertises = useTranslations("expertises");
   const tCommon = useTranslations("common");
@@ -22,7 +28,15 @@ export function ExpertiseGrid({ teaser = false, hideHeader = false }: ExpertiseG
     description: string;
     icon: IconName;
   }[];
-  const displayed = teaser ? teaserItems : items;
+  const cmsItems =
+    itemsFromCms && itemsFromCms.length > 0
+      ? itemsFromCms.map((item) => ({
+          title: item.title,
+          description: item.description,
+          icon: (item.icon as IconName) || "strategy",
+        }))
+      : null;
+  const displayed = teaser ? teaserItems : cmsItems || items;
 
   return (
     <SectionContainer variant="white" className={hideHeader ? "pt-0 md:pt-0" : undefined}>

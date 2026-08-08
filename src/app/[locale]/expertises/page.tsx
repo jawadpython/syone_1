@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/ui/PageHero";
 import { ExpertiseGrid } from "@/components/sections/expertises/ExpertiseGrid";
+import { getExpertises, type LocaleCode } from "@/sanity/fetch";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -22,11 +23,12 @@ export default async function ExpertisesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "expertises.hero" });
+  const expertises = await getExpertises(locale as LocaleCode);
 
   return (
     <>
       <PageHero title={t("title")} subtitle={t("subtitle")} />
-      <ExpertiseGrid hideHeader />
+      <ExpertiseGrid hideHeader itemsFromCms={expertises} />
     </>
   );
 }

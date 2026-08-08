@@ -37,7 +37,12 @@ export type ExpertiseContent = {
   icon?: string;
 };
 
-const fetchOptions = { next: { revalidate: 60 } };
+const fetchOptions = {
+  next: {
+    revalidate: 10,
+    tags: ["sanity"],
+  },
+};
 
 export async function getFounders(locale: LocaleCode): Promise<FounderContent[]> {
   try {
@@ -53,7 +58,8 @@ export async function getFounders(locale: LocaleCode): Promise<FounderContent[]>
       initials: String(row.initials || ""),
       photoUrl: (row.photoUrl as string | null) || null,
     }));
-  } catch {
+  } catch (error) {
+    console.error("[sanity] getFounders failed", error);
     return [];
   }
 }
@@ -78,7 +84,8 @@ export async function getCaseStudies(locale: LocaleCode): Promise<CaseStudyConte
         })),
       };
     });
-  } catch {
+  } catch (error) {
+    console.error("[sanity] getCaseStudies failed", error);
     return [];
   }
 }
@@ -93,7 +100,8 @@ export async function getExpertises(locale: LocaleCode): Promise<ExpertiseConten
       description: pickLocale(row.description as LocaleValue, locale),
       icon: row.icon ? String(row.icon) : undefined,
     }));
-  } catch {
+  } catch (error) {
+    console.error("[sanity] getExpertises failed", error);
     return [];
   }
 }

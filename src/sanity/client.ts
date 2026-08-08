@@ -5,5 +5,6 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: true,
+  // Avoid Sanity CDN stale reads after Studio publish
+  useCdn: false,
 });
