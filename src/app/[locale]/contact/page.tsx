@@ -4,6 +4,11 @@ import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/sections/contact/ContactForm";
 import { ContactInfo } from "@/components/sections/contact/ContactInfo";
 import { SectionContainer } from "@/components/ui/SectionContainer";
+import {
+  getContactPageContent,
+  getSiteSettings,
+  type LocaleCode,
+} from "@/sanity/fetch";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -23,18 +28,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const lang = locale as LocaleCode;
   const t = await getTranslations({ locale, namespace: "contact.hero" });
+  const [page, settings] = await Promise.all([
+    getContactPageContent(lang),
+    getSiteSettings(lang),
+  ]);
 
   return (
     <>
-      <PageHero title={t("title")} subtitle={t("subtitle")} />
+      <PageHero
+        title={page?.heroTitle || t("title")}
+        subtitle={page?.heroSubtitle || t("subtitle")}
+      />
       <SectionContainer variant="subtle" className="pt-0 md:pt-0">
         <div className="grid gap-8 lg:grid-cols-5 lg:gap-12">
           <div className="lg:col-span-3">
             <ContactForm />
           </div>
           <div className="lg:col-span-2">
-            <ContactInfo />
+            <ContactInfo settingsFromCms={settings} pageFromCms={page} />
           </div>
         </div>
       </SectionContainer>

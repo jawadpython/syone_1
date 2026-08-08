@@ -2,11 +2,14 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/SectionContainer";
-import type { FounderContent } from "@/sanity/fetch";
+import type { FounderContent, TeamPageContent } from "@/sanity/fetch";
 
 interface TeamSectionProps {
   teaser?: boolean;
   foundersFromCms?: FounderContent[];
+  pageFromCms?: TeamPageContent | null;
+  sectionEyebrow?: string;
+  sectionTitle?: string;
 }
 
 const founderPhotos: Record<string, string> = {
@@ -14,21 +17,33 @@ const founderPhotos: Record<string, string> = {
   "Youssef Zerrari": "/images/youssef-zerrari.webp",
 };
 
-export function TeamSection({ teaser = false, foundersFromCms }: TeamSectionProps) {
+export function TeamSection({
+  teaser = false,
+  foundersFromCms,
+  pageFromCms,
+  sectionEyebrow,
+  sectionTitle,
+}: TeamSectionProps) {
   const tHome = useTranslations("home.team");
   const tTeam = useTranslations("team");
   const tCommon = useTranslations("common");
   const fallbackFounders = tTeam.raw("founders") as FounderContent[];
   const founders =
     foundersFromCms && foundersFromCms.length > 0 ? foundersFromCms : fallbackFounders;
+  const network =
+    pageFromCms && pageFromCms.network.length > 0
+      ? pageFromCms.network
+      : (tTeam.raw("network") as string[]);
 
   return (
     <SectionContainer variant="white">
       <div className="mb-10 md:mb-12">
-        <p className="eyebrow">{teaser ? tHome("eyebrow") : tHome("eyebrow")}</p>
+        <p className="eyebrow">{sectionEyebrow || tHome("eyebrow")}</p>
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="max-w-2xl font-serif text-3xl font-medium leading-tight text-navy md:text-[2.25rem]">
-            {teaser ? tHome("title") : tTeam("hero.title")}
+            {teaser
+              ? sectionTitle || tHome("title")
+              : pageFromCms?.heroTitle || tTeam("hero.title")}
           </h2>
           {teaser && (
             <Button href="/equipe" variant="outline-blue" className="w-full shrink-0 sm:w-auto">
@@ -38,14 +53,14 @@ export function TeamSection({ teaser = false, foundersFromCms }: TeamSectionProp
         </div>
         {!teaser && (
           <p className="prose-width mt-4 text-base leading-relaxed text-text-muted">
-            {tTeam("hero.subtitle")}
+            {pageFromCms?.heroSubtitle || tTeam("hero.subtitle")}
           </p>
         )}
       </div>
 
       {!teaser && (
         <p className="prose-width mb-12 text-base leading-relaxed text-text-muted">
-          {tTeam("complement")}
+          {pageFromCms?.complement || tTeam("complement")}
         </p>
       )}
 
@@ -105,9 +120,11 @@ export function TeamSection({ teaser = false, foundersFromCms }: TeamSectionProp
             </svg>
           </div>
           <div className="flex min-w-0 flex-1 flex-col justify-center px-4 py-4 sm:px-5">
-            <h3 className="font-sans text-base font-bold text-navy">{tTeam("networkCardTitle")}</h3>
+            <h3 className="font-sans text-base font-bold text-navy">
+              {pageFromCms?.networkCardTitle || tTeam("networkCardTitle")}
+            </h3>
             <p className="mt-2 text-xs leading-relaxed text-text-muted">
-              {tTeam("networkCardText")}
+              {pageFromCms?.networkCardText || tTeam("networkCardText")}
             </p>
           </div>
         </article>
@@ -115,9 +132,11 @@ export function TeamSection({ teaser = false, foundersFromCms }: TeamSectionProp
 
       {!teaser && (
         <div className="mt-16 border-t border-border pt-12">
-          <h3 className="text-2xl font-normal text-navy">{tTeam("networkTitle")}</h3>
+          <h3 className="text-2xl font-normal text-navy">
+            {pageFromCms?.networkTitle || tTeam("networkTitle")}
+          </h3>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {(tTeam.raw("network") as string[]).map((item) => (
+            {network.map((item) => (
               <li
                 key={item}
                 className="rounded-lg border border-border bg-white px-5 py-4 text-sm leading-relaxed text-text-gray"

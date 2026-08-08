@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getSiteSettings, type LocaleCode } from "@/sanity/fetch";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const settings = await getSiteSettings(locale as LocaleCode);
 
   return (
     <html lang={locale} className={`${manrope.variable} ${fraunces.variable}`}>
@@ -44,7 +46,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>
-          <Footer />
+          <Footer settingsFromCms={settings} />
         </NextIntlClientProvider>
       </body>
     </html>

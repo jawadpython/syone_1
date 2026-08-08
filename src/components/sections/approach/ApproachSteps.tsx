@@ -1,43 +1,54 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/SectionContainer";
+import type { ApproachContent } from "@/sanity/fetch";
 
 interface ApproachStepsProps {
   teaser?: boolean;
+  contentFromCms?: ApproachContent | null;
+  sectionEyebrow?: string;
+  sectionTitle?: string;
 }
 
-export function ApproachSteps({ teaser = false }: ApproachStepsProps) {
+export function ApproachSteps({
+  teaser = false,
+  contentFromCms,
+  sectionEyebrow,
+  sectionTitle,
+}: ApproachStepsProps) {
   const tHome = useTranslations("home.approach");
   const tApproach = useTranslations("approach");
   const tCommon = useTranslations("common");
-  const steps = tApproach.raw("steps") as {
-    number: string;
-    title: string;
-    description: string;
-  }[];
+  const fallbackSteps = tApproach.raw("steps") as ApproachContent["steps"];
+  const steps =
+    contentFromCms && contentFromCms.steps.length > 0
+      ? contentFromCms.steps
+      : fallbackSteps;
 
   return (
     <SectionContainer variant="subtle">
       <div className="mb-12 flex flex-col items-start gap-4 md:mb-14">
         <div className="flex w-full items-center gap-4">
           <div className="h-px flex-1 bg-border" />
-          <p className="eyebrow mb-0 shrink-0">{teaser ? tHome("eyebrow") : tHome("eyebrow")}</p>
+          <p className="eyebrow mb-0 shrink-0">
+            {sectionEyebrow || tHome("eyebrow")}
+          </p>
           <div className="h-px flex-1 bg-border" />
         </div>
         {!teaser && (
           <div className="w-full text-center">
             <h2 className="font-serif text-3xl font-medium text-navy md:text-[2.25rem]">
-              {tApproach("hero.title")}
+              {contentFromCms?.heroTitle || tApproach("hero.title")}
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-base text-text-muted">
-              {tApproach("hero.subtitle")}
+              {contentFromCms?.heroSubtitle || tApproach("hero.subtitle")}
             </p>
           </div>
         )}
         {teaser && (
           <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="max-w-xl font-serif text-3xl font-medium leading-tight text-navy md:text-[2.1rem]">
-              {tHome("title")}
+              {sectionTitle || tHome("title")}
             </h2>
             <Button href="/notre-approche" variant="outline-blue" className="w-full shrink-0 sm:w-auto">
               {tCommon("learnMore")}
@@ -76,7 +87,9 @@ export function ApproachSteps({ teaser = false }: ApproachStepsProps) {
 
       {!teaser && (
         <blockquote className="mt-16 max-w-3xl border-l-2 border-electric pl-6">
-          <p className="text-lg leading-relaxed text-navy">{tApproach("keyMessage")}</p>
+          <p className="text-lg leading-relaxed text-navy">
+            {contentFromCms?.keyMessage || tApproach("keyMessage")}
+          </p>
         </blockquote>
       )}
     </SectionContainer>

@@ -8,12 +8,16 @@ interface ExpertiseGridProps {
   teaser?: boolean;
   hideHeader?: boolean;
   itemsFromCms?: ExpertiseContent[];
+  eyebrow?: string;
+  title?: string;
 }
 
 export function ExpertiseGrid({
   teaser = false,
   hideHeader = false,
   itemsFromCms,
+  eyebrow,
+  title,
 }: ExpertiseGridProps) {
   const tHome = useTranslations("home.expertises");
   const tExpertises = useTranslations("expertises");
@@ -28,6 +32,7 @@ export function ExpertiseGrid({
     description: string;
     icon: IconName;
   }[];
+
   const cmsItems =
     itemsFromCms && itemsFromCms.length > 0
       ? itemsFromCms.map((item) => ({
@@ -36,16 +41,21 @@ export function ExpertiseGrid({
           icon: (item.icon as IconName) || "strategy",
         }))
       : null;
-  const displayed = teaser ? teaserItems : cmsItems || items;
+
+  const displayed = teaser
+    ? cmsItems
+      ? cmsItems.slice(0, 4)
+      : teaserItems
+    : cmsItems || items;
 
   return (
     <SectionContainer variant="white" className={hideHeader ? "pt-0 md:pt-0" : undefined}>
       {!hideHeader && (
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <p className="eyebrow">{teaser ? tHome("eyebrow") : "Expertises"}</p>
+            <p className="eyebrow">{eyebrow || (teaser ? tHome("eyebrow") : "Expertises")}</p>
             <h2 className="font-serif text-3xl font-medium leading-tight text-navy md:text-[2.25rem]">
-              {teaser ? tHome("title") : tExpertises("hero.title")}
+              {title || (teaser ? tHome("title") : tExpertises("hero.title"))}
             </h2>
             {!teaser && (
               <p className="mt-4 text-base leading-relaxed text-text-muted">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ApproachSteps } from "@/components/sections/approach/ApproachSteps";
+import { getApproachContent, type LocaleCode } from "@/sanity/fetch";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ApproachPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const approach = await getApproachContent(locale as LocaleCode);
 
-  return <ApproachSteps />;
+  return <ApproachSteps contentFromCms={approach} />;
 }

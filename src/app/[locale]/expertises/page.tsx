@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/ui/PageHero";
 import { ExpertiseGrid } from "@/components/sections/expertises/ExpertiseGrid";
-import { getExpertises, type LocaleCode } from "@/sanity/fetch";
+import { getExpertises, getExpertisesPageContent, type LocaleCode } from "@/sanity/fetch";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -22,12 +22,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ExpertisesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const lang = locale as LocaleCode;
   const t = await getTranslations({ locale, namespace: "expertises.hero" });
-  const expertises = await getExpertises(locale as LocaleCode);
+  const [expertises, page] = await Promise.all([
+    getExpertises(lang),
+    getExpertisesPageContent(lang),
+  ]);
 
   return (
     <>
-      <PageHero title={t("title")} subtitle={t("subtitle")} />
+      <PageHero
+        title={page?.heroTitle || t("title")}
+        subtitle={page?.heroSubtitle || t("subtitle")}
+      />
       <ExpertiseGrid hideHeader itemsFromCms={expertises} />
     </>
   );

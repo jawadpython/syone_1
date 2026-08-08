@@ -4,18 +4,9 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/SectionContainer";
+import type { CaseStudyContent } from "@/sanity/fetch";
 
-interface CaseStudy {
-  id: string;
-  category: string;
-  title: string;
-  challenge: string;
-  value: string;
-  image: string;
-  metrics: { value: string; label: string }[];
-}
-
-function CaseStudyCard({ item }: { item: CaseStudy }) {
+function CaseStudyCard({ item }: { item: CaseStudyContent }) {
   const t = useTranslations("common");
 
   return (
@@ -54,7 +45,7 @@ function CaseStudyCard({ item }: { item: CaseStudy }) {
         <div className="mt-auto grid grid-cols-2 border-t border-border pt-5">
           {item.metrics.map((metric, index) => (
             <div
-              key={metric.label}
+              key={`${metric.value}-${metric.label}`}
               className={index === 0 ? "border-r border-border pr-3" : "pl-3"}
             >
               <p className="font-serif text-[1.65rem] font-semibold leading-none text-electric">
@@ -73,7 +64,9 @@ interface CaseStudyGridProps {
   limit?: number;
   showHeader?: boolean;
   showViewAll?: boolean;
-  itemsFromCms?: CaseStudy[];
+  itemsFromCms?: CaseStudyContent[];
+  eyebrow?: string;
+  title?: string;
 }
 
 export function CaseStudyGrid({
@@ -81,11 +74,13 @@ export function CaseStudyGrid({
   showHeader = true,
   showViewAll = false,
   itemsFromCms,
+  eyebrow,
+  title,
 }: CaseStudyGridProps) {
   const t = useTranslations("home.cases");
   const tCases = useTranslations("cases");
   const tCommon = useTranslations("common");
-  const fallbackItems = tCases.raw("items") as CaseStudy[];
+  const fallbackItems = tCases.raw("items") as CaseStudyContent[];
   const items = itemsFromCms && itemsFromCms.length > 0 ? itemsFromCms : fallbackItems;
   const displayed = limit ? items.slice(0, limit) : items;
 
@@ -94,9 +89,9 @@ export function CaseStudyGrid({
       {showHeader && (
         <div className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-start md:justify-between md:gap-8">
           <div className="max-w-2xl">
-            <p className="eyebrow">{t("eyebrow")}</p>
+            <p className="eyebrow">{eyebrow || t("eyebrow")}</p>
             <h2 className="font-serif text-[1.75rem] font-medium leading-tight text-navy sm:text-3xl md:text-[2.35rem]">
-              {t("title")}
+              {title || t("title")}
             </h2>
           </div>
           {showViewAll && (

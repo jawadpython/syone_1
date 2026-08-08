@@ -8,7 +8,15 @@ import { TeamSection } from "@/components/sections/team/TeamSection";
 import { ContactCTA } from "@/components/sections/home/ContactCTA";
 import { HomeHero } from "@/components/sections/home/HomeHero";
 import { StatsStrip } from "@/components/sections/home/StatsStrip";
-import { getCaseStudies, getFounders, type LocaleCode } from "@/sanity/fetch";
+import {
+  getApproachContent,
+  getCaseStudies,
+  getExpertises,
+  getFounders,
+  getHomeContent,
+  getTeamPageContent,
+  type LocaleCode,
+} from "@/sanity/fetch";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,21 +37,62 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const lang = locale as LocaleCode;
-  const [caseStudies, founders] = await Promise.all([
+
+  const [home, caseStudies, founders, expertises, approach, teamPage] = await Promise.all([
+    getHomeContent(lang),
     getCaseStudies(lang),
     getFounders(lang),
+    getExpertises(lang),
+    getApproachContent(lang),
+    getTeamPageContent(lang),
   ]);
 
   return (
     <>
-      <HomeHero />
-      <ValuePillars />
-      <CaseStudyGrid limit={4} showViewAll itemsFromCms={caseStudies} />
-      <StatsStrip />
-      <ExpertiseGrid teaser />
-      <ApproachSteps teaser />
-      <TeamSection teaser foundersFromCms={founders} />
-      <ContactCTA />
+      <HomeHero
+        title={home?.heroTitle}
+        accent={home?.heroAccent}
+        subtitle={home?.heroSubtitle}
+      />
+      <ValuePillars
+        eyebrow={home?.pillarsEyebrow}
+        title={home?.pillarsTitle}
+        accent={home?.pillarsAccent}
+        intro={home?.pillarsIntro}
+        itemsFromCms={home?.pillars}
+      />
+      <CaseStudyGrid
+        limit={4}
+        showViewAll
+        itemsFromCms={caseStudies}
+        eyebrow={home?.casesEyebrow}
+        title={home?.casesTitle}
+      />
+      <StatsStrip itemsFromCms={home?.stats} />
+      <ExpertiseGrid
+        teaser
+        itemsFromCms={expertises}
+        eyebrow={home?.expertisesEyebrow}
+        title={home?.expertisesTitle}
+      />
+      <ApproachSteps
+        teaser
+        contentFromCms={approach}
+        sectionEyebrow={home?.approachEyebrow}
+        sectionTitle={home?.approachTitle}
+      />
+      <TeamSection
+        teaser
+        foundersFromCms={founders}
+        pageFromCms={teamPage}
+        sectionEyebrow={home?.teamEyebrow}
+        sectionTitle={home?.teamTitle}
+      />
+      <ContactCTA
+        title={home?.ctaTitle}
+        subtitle={home?.ctaSubtitle}
+        note={home?.ctaNote}
+      />
     </>
   );
 }
